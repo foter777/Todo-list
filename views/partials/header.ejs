@@ -9,18 +9,20 @@
     <title>To do list</title>
 </head>
 <header>
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4">To Do List</span>
-          </a>
-    
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/" class="nav-link " aria-current="page">Today</a></li>
-            <li class="nav-item"><a href="/Work" class="nav-link">Work</a></li>
-          </ul>
-        </header>
+    <div class="header-container">
+      <h1>To do list</h1>
+      <form action="/newList" method="post" class = "d-flex">
+        <input name="item" type="text" class="form-newList" placeholder= "New to do list"/>
+        
+        <button class="btn btn-outline-success" type="submit">Add</button>
+    </form>
+      
+      </div>
+      <div class="scrollmenu" method = "post">
+        <% for (i = 0; i < locals.newListItem.length; i++)  {%>
+          <a href="<%=locals.newListItem[i].name %>"> <%=newListItem[i].name%></a>
+
+        <% } %>
       </div>
 </header>
 <body>
