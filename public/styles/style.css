@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #05050f;
+ 
+
+}
 .list-container{
     display: flex;
     justify-content: center;
@@ -11,15 +16,23 @@
 
 .header-container{
     display: flex;
-    justify-content: center;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-container > form{
-    padding-left: 1000px;
+    padding-right: 400px;
     margin: 0;
+    width: 50px;
 }
 
-
+h1{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 50px;
+}
 
 .form-control{
     width: 500px;
@@ -30,7 +43,10 @@
 
 
 form .btn{
-    margin-left: 50px;
+    background-color: grey;
+    color: aliceblue;
+    border: none;
+    margin-left: 30px;
     margin-top: 50px;
 }
 
@@ -50,6 +66,9 @@ input{
 
     
 }
+p{
+    color: white;
+}
 .form-check{
     margin-top: 20px;
 }
@@ -57,10 +76,6 @@ input{
 .form-check-label{
     display: flex;
     font-size: 20px;
-}
-
-.form-check-label .checked{
-    text-decoration: line-through;
 }
 
 .form-check-input{
